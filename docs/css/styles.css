@@ -382,11 +382,46 @@ body {
   font-family: "impact", sans-serif;
 }
 
+.cloud-bg {
+  position: absolute;
+  top: 180px;
+  left: 180px;
+  width: 55%;
+  z-index: 100;
+  opacity: 0.99;
+}
+.cloud-bg-2 {
+  position: absolute;
+  width: 55%;
+  left: 0px;
+  top: 200px;
+  z-index: 100;
+  opacity: 0.99;
+}
+
+.header__bottom {
+  position: relative;
+  z-index: 10;
+}
 .header--image {
   width: 100vw;
 }
 
 /* ESTILOS DEL MAIN */ /* ESTILOS DEL FOOTER */
+.cloud {
+  background-color: red;
+  position: absolute;
+  background-color: transparent;
+  top: 100px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu {
+  position: absolute;
+}
+
 .menu-icon {
   width: 40px;
   position: absolute;

@@ -1,8 +1,27 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/pseudo.scss' as *;
 
+.cloud-bg{
+    position: absolute;
+    top: 180px;
+    left: 180px;
+    width: 55%;
+    z-index: 100;
+    opacity: 0.99;
+    &-2{
+        position: absolute;
+        width: 55%;
+        left: 0px;
+        top: 200px;
+        z-index: 100;
+        opacity: 0.99;
+    }
+}
 .header{
-   
+   &__bottom{
+    position: relative;
+    z-index: 10;
+   }
     &--image{
         width: 100vw;
     }
