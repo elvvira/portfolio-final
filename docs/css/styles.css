@@ -384,6 +384,8 @@ body {
 
 .header {
   overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 .header__bottom {
   position: relative;
@@ -405,70 +407,51 @@ body {
 }
 
 /* ESTILOS DEL MAIN */ /* ESTILOS DEL FOOTER */
-.menu__icons {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  position: relative;
-  right: -150px;
+.menu-icons {
+  position: absolute;
   top: 20px;
+  left: 85vw;
+  width: 100%;
 }
 @media screen and (min-width: 640px) {
-  .menu__icons {
+  .menu-icons {
     top: 30px;
-    right: -340px;
+    left: 90vw;
   }
 }
 @media screen and (min-width: 1440px) {
-  .menu__icons {
+  .menu-icons {
     top: 50px;
-    right: -650px;
+    left: 95vw;
   }
-}
-
-.menu-icon,
-.menu-close {
-  width: 30px;
-  display: block;
 }
 
 .menu-icon {
   width: 35px;
-  position: absolute;
-}
-
-.menu-icon--show {
-  display: none;
-}
-
-.menu-close--show {
-  display: none;
 }
 
 .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 40px;
   width: 80%;
-  height: 100%;
+  height: 200px;
   background-image: url(../assets/images/menu-cloud.png);
   background-size: 100%;
   background-repeat: no-repeat;
-  position: absolute;
-  top: 40px;
-  left: 50%;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  padding-top: 14%;
-  transform: translate(-50%, 40%);
-  transition: transform 2s, opacity 2s;
+  transform: translate(-50%, 100%);
+  transition: transform 1s, opacity 2s;
   opacity: 0.2;
 }
 @media screen and (min-width: 640px) {
   .nav {
     font-size: 1.5rem;
     width: 60%;
-    height: 100%;
     top: 100px;
-    padding-top: 13%;
     transform: translate(-50%, 85%);
   }
 }
@@ -543,21 +526,20 @@ body {
 }
 
 .submenu {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 80%;
-  height: 100%;
+  height: 200px;
   background-image: url(../assets/images/menu-cloud-2.png);
   background-size: 100%;
   background-repeat: no-repeat;
-  position: absolute;
-  top: 40px;
-  left: 10%;
   text-align: center;
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  padding-top: 20%;
-  transform: translateY(100%);
-  transition: all 2s;
+  transform: translateY(125%);
+  transition: transform 2s, opacity 2s;
   opacity: 0.2;
 }
 @media screen and (min-width: 640px) {
@@ -575,6 +557,6 @@ body {
 }
 
 .submenu--show {
-  transform: translateY(0%);
+  transform: translateY(0);
   opacity: 1;
 }

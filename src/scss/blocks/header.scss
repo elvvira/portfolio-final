@@ -1,21 +1,22 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/pseudo.scss' as *;
 
-
-.header{
-    overflow: hidden;
-   &__bottom{
-        position: relative;
-        top: -150px;
-        z-index: 1;
-        @include responsive (tablet){
-            top: -300px;
-        }
-        @include responsive (desktop){
-            top: -500px;
-        }
+.header {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  &__bottom {
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    @include responsive(tablet) {
+      top: -300px;
     }
-    &--image{
-        width: 100vw;
+    @include responsive(desktop) {
+      top: -500px;
     }
+  }
+  &--image {
+    width: 100vw;
+  }
 }
