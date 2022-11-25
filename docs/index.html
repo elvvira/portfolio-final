@@ -1,223 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="header__top">
-        <div class="menu-icons">
-          <img
-            data-image="icon"
-            id="menu-icon"
-            class="menu-icon"
-            src="assets/images/icon-menu.svg"
-            alt=""
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <img class="header__logo" src="assets/images/logo-header.png" alt="">
+      <div class="menu-icons">
+        <img data-image="icon" id="menu-icon" class="menu-icon" src="assets/images/icon-menu.svg" alt="" />
+      </div>
+      <div class="header__text">
+        <h1>front-end developer · graphic designer</h1>
+      </div>
+
+      <picture>
+        <source media="(min-width: 1200px)" srcset="assets/images/bg-nubes-desktop.png" />
+        <source media="(min-width: 768px)" srcset="assets/images/bg-nubes-tablet.png" />
+        <source media="(min-width: 360px)" srcset="assets/images/bg-nubes-mobile.png" />
+        <img class="header--image" src="assets/images/bg-nubes-desktop.png" alt="" />
+      </picture>
+    </div>
+
+    <nav id="menu" class="nav">
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="#" class="menu__link">me</a>
+        </li>
+
+        <li class="menu__item">
+          <a href="#" class="menu__link">abaout</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">skills</a>
+        </li>
+        <li class="menu__item menu__item--work">
+          <a href="#" class="menu__link">works</a>
+
+          <img id="arrow" class="icon-arrow" src="assets/images/icon-arrow.svg" alt="" />
+          <ul id="submenu" class="submenu">
+            <li class="submenu__item">
+              <a href="">jjfojdgj</a>
+            </li>
+            <li class="submenu__item">
+              <a href="">jjfojdfogj</a>
+            </li>
+            <li class="submenu__item">
+              <a href="">jjfoogj</a>
+            </li>
+            <li class="submenu__item">
+              <a href="">jjfjdfogj</a>
+            </li>
+            <img id="arrow-reverse" class="icon-arrow-reverse" src="assets/images/icon-arrow-white.svg" alt="" />
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__bottom">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="assets/images/bg-flores-desktop.png" />
+        <source media="(min-width: 768px)" srcset="assets/images/bg-flores-tablet.png" />
+        <source media="(min-width: 360px)" srcset="assets/images/bg-flores-mobile.png" />
+        <img class="header--image" src="assets/images/bg-flores-desktop.png" alt="" />
+      </picture>
+    </div>
+  </header>
+
+  <main class="main">
+    <article class="article article-me">
+      <div class="article-me__description">
+        <h2 class="title-spray article-me__title">Im Elvira Castellanos</h2>
+        <p class="article-me__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequuntur
+          exercitationem, animi maiores, quaerat praesentium vero ad voluptate quas dolorum, aspernatur at eius. Animi
+          architecto consectetur porro ducimus deleniti distinctio.</p>
+      </div>
+
+      <picture class="article-me__image" >
+        <source media="(min-width: 1200px)" srcset="assets/images/retrato-desktop.png" />
+        <source media="(min-width: 768px)" srcset="assets/images/retrato-tablet.png" />
+        <source media="(min-width: 360px)" srcset="assets/images/retrato-tablet.png" />
+        <img src="assets/images/retrato-desktop.png" alt="" />
+      </picture>
+
+
+    </article>
+
+    <article class="article article-about">
+
+      <div class="article-about-container">
+        <div class="article__description article__front">
+          <div>
+
+          </div>
+          <h2 class=" title-spray">
+            <span class="title-spray__span">
+              Front End
+            </span>
+            Developer
+          </h2>
+          <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequuntur
+            exercitationem, animi maiores, quaerat praesentium vero ad voluptate quas dolorum, aspernatur at eius. Animi
+            architecto consectetur porro ducimus deleniti distinctio.</p>
+        </div>
+        <div class="article__description article__design">
+          <h2 class=" title-spray">
+            <span class="title-spray__span">
+              Graphic
+            </span>
+            Designer
+          </h2>
+          <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequuntur
+            exercitationem, animi maiores, quaerat praesentium vero ad voluptate quas dolorum, aspernatur at eius. Animi
+            architecto consectetur porro ducimus deleniti distinctio.</p>
         </div>
 
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="assets/images/bg-nubes-desktop.png"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="assets/images/bg-nubes-tablet.png"
-          />
-          <source
-            media="(min-width: 360px)"
-            srcset="assets/images/bg-nubes-mobile.png"
-          />
-          <img
-            class="header--image"
-            src="assets/images/bg-nubes-desktop.png"
-            alt=""
-          />
-        </picture>
       </div>
 
-      <nav id="menu" class="nav">
-        <ul class="menu">
-          <li class="menu__item">
-            <a href="#" class="menu__link">me</a>
-          </li>
-
-          <li class="menu__item">
-            <a href="#" class="menu__link">abaout</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">skills</a>
-          </li>
-          <li class="menu__item menu__item--work">
-            <a href="#" class="menu__link">works</a>
-
-            <img
-              id="arrow"
-              class="icon-arrow"
-              src="assets/images/icon-arrow.svg"
-              alt=""
-            />
-            <ul id="submenu" class="submenu">
-              <li class="submenu__item">
-                <a href="">jjfojdgj</a>
-              </li>
-              <li class="submenu__item">
-                <a href="">jjfojdfogj</a>
-              </li>
-              <li class="submenu__item">
-                <a href="">jjfoogj</a>
-              </li>
-              <li class="submenu__item">
-                <a href="">jjfjdfogj</a>
-              </li>
-              <img
-                id="arrow-reverse"
-                class="icon-arrow-reverse"
-                src="assets/images/icon-arrow-white.svg"
-                alt=""
-              />
-            </ul>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">contact</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="header__bottom">
-        <picture>
-          <source
-            media="(min-width: 1200px)"
-            srcset="assets/images/bg-flores-desktop.png"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="assets/images/bg-flores-tablet.png"
-          />
-          <source
-            media="(min-width: 360px)"
-            srcset="assets/images/bg-flores-mobile.png"
-          />
-          <img
-            class="header--image"
-            src="assets/images/bg-flores-desktop.png"
-            alt=""
-          />
-        </picture>
+      <div class="read-more">
+        <img class="read-more-text" src="assets/images/read-more.svg" alt="">
+        <img class="read-more-image" src="assets/images/mancha-read.svg" alt="">
       </div>
+    </article>
 
-      <!-- <div class="header__section">
-        <h2 class="title">CREATE DEVELOPER</h2>
-        <h2 class="title">GRAPHIC DESIGN</h2>
-        <h1 class="name">
-          <span class="name__span">Elvvira</span>
-          Castellanos
-        </h1>
-      </div> -->
-    </header>
 
-    <!-- <main class="main">
-      <div class="main-container">
-        <article class="article article-me">
-          <div class="article__description">
-            <p class=" title-spray">Hello</p>
-            <p class="article__title">Im Elvira Castellanos</p>
-            <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequuntur exercitationem, animi maiores, quaerat praesentium vero ad voluptate quas dolorum, aspernatur at eius. Animi architecto consectetur porro ducimus deleniti distinctio.</p>
-          </div>
+    <article class="article-work">
+      <div id="accordion" class="works">
+        <div class="works__section works__section-1">
+          <h2 class="works__title">wb jijsijis</h2>
+          <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet,
+            earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis
+            recusandae? Magni nihil cum earum.</p>
+        </div>
+        <div class="works__section works__section-2">
+          <h2 class="works__title">web hoshodhf</h2>
+          <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet,
+            earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis
+            recusandae? Magni nihil cum earum.</p>
+        </div>
+        <div class="works__section works__section-3">
+          <h2 class="works__title">web hoshodhf</h2>
+          <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet,
+            earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis
+            recusandae? Magni nihil cum earum.</p>
+        </div>
+        <div class="works__section works__section-4">
+          <h2 class="works__title">web hoshodhf</h2>
+          <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet,
+            earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis
+            recusandae? Magni nihil cum earum.</p>
+        </div>
+        <div class="works__section works__section-5">
+          <h2 class="works__title">web hoshodhf</h2>
+          <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet,
+            earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis
+            recusandae? Magni nihil cum earum.</p>
+        </div>
+        <div class="works__section works__section-6">
+          <h2 class="works__title">web hoshodhf</h2>
+          <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet,
+            earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis
+            recusandae? Magni nihil cum earum.</p>
+        </div>
 
-          <picture >
-            <source media="(min-width: 800px)" srcset="assets/images/retrato-desktop.png">
-            <source media="(min-width: 480px)" srcset="assets/images/imagen-retrato.png">
-            <img class="article__image" src="assets/images/retrato-desktop.png" alt="">
-          </picture>
+      </div>
+    </article>
 
-        </article>
-        
-        <article class="article article-about">
+    <article class=" article-contact">
+      <img class="article-contact__logo" src="assets/images/logo-footer.svg" alt="">
+      <div class="article-contact__icons">
+        <img src="assets/images/github.svg" alt="">
+        <img src="assets/images/correo.svg" alt="">
+        <img src="assets/images/instagram.png" alt="">
+        <img src="assets/images/behance.svg" alt="">
+        <img src="assets/images/linkedin.svg" alt="">
+      </div>
+    </article>
 
-          <div class="article-about-container">
-            <div class="article__description article__front"> 
-              <div>
-                
-              </div>
-              <h2 class=" title-spray">
-                <span class="title-spray__span">
-                  Front End 
-                </span> 
-                Developer
-              </h2>
-              <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequuntur exercitationem, animi maiores, quaerat praesentium vero ad voluptate quas dolorum, aspernatur at eius. Animi architecto consectetur porro ducimus deleniti distinctio.</p>
-            </div>
-            <div class="article__description article__design"> 
-              <h2 class=" title-spray">
-                <span class="title-spray__span">
-                  Graphic
-                </span> 
-                Designer
-              </h2>
-              <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequuntur exercitationem, animi maiores, quaerat praesentium vero ad voluptate quas dolorum, aspernatur at eius. Animi architecto consectetur porro ducimus deleniti distinctio.</p>
-            </div>
+  </main>
 
-          </div>
+  <footer class="footer"></footer>
 
-          <div class="read-more">
-            <img class="read-more-text" src="assets/images/read-more.svg" alt="">
-            <img class="read-more-image" src="assets/images/mancha-read.svg" alt="">
-          </div>
-        </article >
-        
-        
-        <article class="article-work">
-          <div id="accordion" class="works">
-            <div class="works__section works__section-1">
-              <h2 class="works__title">wb jijsijis</h2>
-              <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet, earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis recusandae? Magni nihil cum earum.</p>
-            </div>
-            <div class="works__section works__section-2">
-              <h2 class="works__title">web hoshodhf</h2>
-              <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet, earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis recusandae? Magni nihil cum earum.</p>
-              </div>
-            <div class="works__section works__section-3">
-              <h2 class="works__title">web hoshodhf</h2>
-              <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet, earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis recusandae? Magni nihil cum earum.</p>
-            </div>
-            <div class="works__section works__section-4">
-              <h2 class="works__title">web hoshodhf</h2>
-              <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet, earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis recusandae? Magni nihil cum earum.</p>
-            </div>
-            <div class="works__section works__section-5">
-              <h2 class="works__title">web hoshodhf</h2>
-              <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet, earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis recusandae? Magni nihil cum earum.</p>
-            </div>
-            <div class="works__section works__section-6">
-              <h2 class="works__title">web hoshodhf</h2>
-              <p class="works__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel dicta nemo amet, earum, repellendus ea exercitationem ducimus distinctio cupiditate tempora unde expedita quis officiis recusandae? Magni nihil cum earum.</p>
-            </div>
+  <script src="js/scripts.js"></script>
+</body>
 
-          </div>
-        </article>
-
-        <article class=" article-contact">
-          <img class="article-contact__logo" src="assets/images/logo-footer.svg" alt="">
-          <div class="article-contact__icons">
-            <img src="assets/images/github.svg" alt="">
-            <img src="assets/images/correo.svg" alt="">
-            <img src="assets/images/instagram.png" alt="">
-            <img src="assets/images/behance.svg" alt="">
-            <img src="assets/images/linkedin.svg" alt="">
-          </div>
-        </article>
-
-      </main> -->
-
-    <footer class="footer"></footer>
-    <!-- </div> -->
-    <script src="js/scripts.js"></script>
-  </body>
 </html>

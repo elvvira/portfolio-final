@@ -1,2 +1,15 @@
 @use '../mixins/responsive.scss' as *;
 
+.title-spray{
+    font-family: 'spray';
+    font-size: 2rem;
+    @include responsive(tablet) {
+        font-size: 3rem;
+      }
+      @include responsive(laptop) {
+        font-size: 3.1rem;
+      }
+      @include responsive(desktop) {
+        font-size: 3.2rem;
+      }
+}

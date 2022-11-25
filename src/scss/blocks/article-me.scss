@@ -1,2 +1,42 @@
 @use '../mixins/responsive.scss' as *;
+.article{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.article-me{
+    height: 100vh;
+    background: linear-gradient(to top, var( --gradient-color), white);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-bottom: 2%;
 
+    @include responsive(desktop) {
+     flex-direction: row-reverse;
+     text-align: left;
+     justify-content: center; 
+     padding-top: 20vh;  
+    }
+
+    &__description{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+       
+        @include responsive(tablet) {
+            font-size: 1.7rem;
+            width: 75%;
+        }
+        @include responsive(desktop) {
+            width: 40%;
+        }
+    }
+    &__title{
+        color: var(--primary-color);
+    }
+    &__image{
+        margin-right: auto;margin-left: auto;
+    }
+}

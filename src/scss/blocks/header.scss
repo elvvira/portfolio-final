@@ -7,16 +7,60 @@
   position: relative;
   &__bottom {
     position: relative;
-    top: -150px;
+    top: -160px;
     z-index: 1;
+    margin-bottom: -160px;
     @include responsive(tablet) {
-      top: -300px;
+      top: -280px;
+      margin-bottom: -280px;
+    }
+    @include responsive(laptop) {
+      top: -400px;
+      margin-bottom: -400px;
     }
     @include responsive(desktop) {
-      top: -500px;
+      top: -450px;
+      margin-bottom: -450px;
     }
   }
   &--image {
     width: 100vw;
+  }
+  &__logo{
+    position: absolute;
+    width: 3rem;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    @include responsive(tablet) {
+      width: 5rem;
+      top: 200px;
+    }
+    @include responsive(laptop) {
+      top: 300px;
+    }
+    @include responsive(desktop) {
+      top: 400px;
+    }
+  }
+  &__text{
+    color: var(--white);
+    position: absolute;
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+    z-index: 100;
+    font-size: 0.5rem;
+    top: 1rem;
+    @include responsive(tablet) {
+      font-size: 0.7rem;
+      top: 1.1rem;
+    }
+    @include responsive(laptop) {
+      top: 1.2rem;
+    }
+    @include responsive(desktop) {
+      top: 2.4rem;
+      color: var(--primary-color);
+    }
   }
 }

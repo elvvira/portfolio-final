@@ -28,11 +28,11 @@ arrowReverseElement.addEventListener('click', event => {
 const accordionElement = document.getElementById('accordion');
 const accordionItems = document.querySelectorAll('.works__content');
 
-// accordionElement.addEventListener("click", (event) => {
-//     if (event.target.classList.contains("works__title")){
-//         accordionItems.forEach((item)=> {
-//             item.classList.remove("works__content--show");
-//         });
-//         event.target.nextElementSibling.classList.add("works__content--show");
-//     }
-// });
+accordionElement.addEventListener("click", (event) => {
+    if (event.target.classList.contains("works__title")){
+        accordionItems.forEach((item)=> {
+            item.classList.remove("works__content--show");
+        });
+        event.target.nextElementSibling.classList.add("works__content--show");
+    }
+});

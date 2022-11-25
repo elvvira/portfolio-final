@@ -1,22 +1,6 @@
 @use '../mixins/responsive.scss' as *;
 
-.menu-icons {
-  position: absolute;
-  top: 20px;
-  left: 85vw;
-  width: 100%;
-  @include responsive(tablet) {
-    top: 30px;
-    left: 90vw;
-  }
-  @include responsive(desktop) {
-    top: 50px;
-    left: 95vw;
-  }
-}
-.menu-icon {
-  width: 35px;
-}
+
 
 .nav {
   display: flex;
@@ -26,26 +10,30 @@
   left: 50%;
   top: 40px;
   width: 80%;
-  height: 200px;
+  height: 220px;
   background-image: url(../assets/images/menu-cloud.png);
   background-size: 100%;
   background-repeat: no-repeat;
   text-align: center;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, 150%);
   transition: transform 1s, opacity 2s;
-  opacity: 0.2;
-
+  opacity: 0.01;
+  font-family: 'spray';
   @include responsive(tablet) {
     font-size: 1.5rem;
-    width: 60%;
-    top: 100px;
-    transform: translate(-50%, 85%);
+    width: 55%;
+    height: 310px;
+    top:90px;
+  }
+  @include responsive(laptop){
+    height: 400px;
   }
   @include responsive(desktop) {
-    font-size: 2rem;
-    width: 50%;
-    height: 100%;
-    padding-top: 10%;
+    font-size: 3rem;
+    width: 60%;
+    height: 600px;
+
+ 
   }
 }
 
@@ -68,16 +56,32 @@
       margin-left: 25%;
     }
     @include responsive(desktop) {
-      margin-left: 30%;
+      margin-left: 22%;
     }
   }
+}
+.menu-icons {
+  position: absolute;
+  top: 20px;
+  left: 85vw;
+  width: 100%;
+  @include responsive(tablet) {
+    top: 30px;
+    left: 90vw;
+  }
+  @include responsive(desktop) {
+    top: 50px;
+    left: 95vw;
+  }
+}
+.menu-icon {
+  width: 35px;
 }
 
 .icon-arrow,
 .icon-arrow-reverse {
   width: 3rem;
-  border-radius: 100%;
-
+  
   @include responsive(tablet) {
     width: 4rem;
   }
@@ -85,44 +89,59 @@
     width: 6rem;
   }
 }
+
 .icon-arrow-reverse {
   position: absolute;
-  top: 10%;
-  left: 14%;
+  top: 45%;
+  left: 7%;
   transform: rotate(180deg);
+  
   @include responsive(tablet) {
-    top: 17%;
+    top: 44%;
+    left: 8%;
+
+  }
+  @include responsive(laptop) {
+    top: 48%;
+    left: 10%;
+
   }
   @include responsive(desktop) {
-    top: 25%;
+    top: 50%;
   }
 }
 
 .submenu {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 10%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 80%;
-  height: 200px;
+  height: 217px;
   background-image: url(../assets/images/menu-cloud-2.png);
   background-size: 100%;
   background-repeat: no-repeat;
   text-align: center;
-  transform: translateY(125%);
-  transition: transform 2s, opacity 2s;
-  opacity: 0.2;
+  transform: translateY(130%);
+  transition: transform 1s, opacity 2s;
+  opacity: 0.01;
 
   @include responsive(tablet) {
-    transform: translateY(80%);
+    transform: translateY(130%);
+    height: 300px;
+  }
+  @include responsive(laptop) {
+    transform: translateY(140%);
+    height: 370px;
   }
   @include responsive(desktop) {
-    transform: translateY(90%);
+    transform: translateY(160%);
+    height: 540px;
   }
   &__item {
-    color: blue;
+    color: var(--primary-color);
   }
 }
 
