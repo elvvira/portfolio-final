@@ -8,10 +8,24 @@ const arrowReverseElement = document.getElementById('arrow-reverse');
 iconElement.addEventListener('click', (event)=>{
     menuElement.classList.add('menu--show');
 });
+iconElement.addEventListener('click', (event)=>{
+    if (event.target.dataset.image === 'icon'){
+        event.target.src = 'assets/images/icon-close.svg';
+        event.target.dataset.image = 'close';
+    }
+    else {
+        event.target.src = 'assets/images/icon-menu.svg';
+        event.target.dataset.image = 'icon';
+        menuElement.classList.remove('menu--show');
+    }
+});
+
 
 closeElement.addEventListener('click', (event)=>{
+    
     menuElement.classList.remove('menu--show');
     submenuElement.classList.remove('submenu--show');
+  
 });
 
 arrowElement.addEventListener('click', (event)=>{
@@ -25,11 +39,12 @@ arrowReverseElement.addEventListener('click', (event)=>{
 const accordionElement = document.getElementById("accordion");
 const accordionItems = document.querySelectorAll(".works__content");
 
-accordionElement.addEventListener("click", (event) => {
-    if (event.target.classList.contains("works__title")){
-        accordionItems.forEach((item)=> {
-            item.classList.remove("works__content--show");
-        });
-        event.target.nextElementSibling.classList.add("works__content--show");
-    }
-});
+// accordionElement.addEventListener("click", (event) => {
+//     if (event.target.classList.contains("works__title")){
+//         accordionItems.forEach((item)=> {
+//             item.classList.remove("works__content--show");
+//         });
+//         event.target.nextElementSibling.classList.add("works__content--show");
+//     }
+// });
+

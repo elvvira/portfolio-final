@@ -1,25 +1,186 @@
 @use '../mixins/responsive.scss' as *;
 
-.cloud{
-    background-color: red;
-    position: absolute;
-    background-color: transparent;
-    top: 100px;
-    width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    
+// .cloud{
+//     background-color: red;
+//     position: absolute;
+//     background-color: transparent;
+//     top: 100px;
+//     width: 70%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     @include responsive (tablet){
+//         width: 55%;
+//     }
+//     @include responsive (desktop){
+//         width: 55%;
+//     }
+// }
+
+// .menu-icon, 
+// .menu__close{
+//     width: 30px;
+//     position: absolute;
+//     top: 3%;
+//     right: 6%;
+
+//     @include responsive (tablet){
+//        width: 50px;
+//        top: 7%;
+//        right: 3%;
+//     }
+//     @include responsive (desktop){
+//         width: 50px;
+//     }
+// }
+.menu__icons{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    right: -150px;
+    top: 20px;
+    @include responsive (tablet){
+        top: 30px;
+        right: -340px;
+    }
+    @include responsive (desktop){
+        top: 50px;
+        right: -650px;
+    }
 }
-.menu{
-    position: absolute;
+.menu-icon,
+.menu-close{
+    width: 30px;
+    display: block;
 }
 .menu-icon{
-    width: 40px;
+    width: 35px;
     position: absolute;
-    top: 3%;
-    right: 7%;
+    
+}
+.menu-icon--show{
+    display: none
+}
+.menu-close--show{
+    display: none;
+}
+.nav{
+    width: 80%;
+    height: 100%;
+    background-image: url(../assets/images/menu-cloud.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 14%;
+    transform: translate(-50%, 40%);
+    transition: transform 2s, opacity 2s;
+    opacity: 0.2;
+    @include responsive (tablet){
+        font-size: 1.5rem;
+        width: 60%;
+        height: 100%;
+        top: 100px;
+        padding-top: 13%;
+        transform: translate(-50%, 85%);
+     }
+     @include responsive (desktop){
+        font-size: 2rem;
+        width: 50%;
+        height: 100%;
+        padding-top: 10%;
+     }
+    
+}
+.menu--show{
+    opacity: 1;
+    transform: translate(-50%, 0%);
+}
+.menu{
+
+    &__close{
+        position: absolute;
+        top: 100px;
+    }
+    &__item--work{
+        display: flex;
+        gap: 15%;
+        align-items: center;
+        margin-left: 28%;
+        @include responsive (tablet){
+            margin-left: 25%;
+        }
+        @include responsive (desktop){
+            margin-left: 30%;
+        }
+       
+    }
+    
+}
+.icon-arrow,
+.icon-arrow-reverse{
+    width: 3rem;
+    border-radius: 100%;
+    
+    @include responsive (tablet){
+        width: 4rem;
+    }
+    @include responsive (desktop){
+        width: 6rem;
+    }
+}
+.icon-arrow-reverse{
+    position: absolute;
+    top: 10%;
+    left: 14%;
+    transform: rotate(180deg);
+    @include responsive (tablet){
+        top: 17%;
+    }
+    @include responsive (desktop){
+        top: 25%;
+    }
 }
 
+.submenu{
+    width: 80%;
+    height: 100%;
+    background-image: url(../assets/images/menu-cloud-2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 40px;
+    left:10%;
+    text-align: center;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding-top: 20%;
+    transform: translateY(100%);
+    transition: all 2s;
+ 
+    opacity: 0.2;
+
+
+    @include responsive (tablet){
+        transform: translateY( 80%);
+    }
+    @include responsive (desktop){
+        transform: translateY( 90%);
+    }
+    &__item{
+       color: blue;
+    }
+}
+ 
+.submenu--show{
+    transform: translateY(0%);
+    opacity: 1;
+}
 
 // .menu{
 //     position: absolute;
