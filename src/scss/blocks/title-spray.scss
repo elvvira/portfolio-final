@@ -3,6 +3,7 @@
 .title-spray{
     font-family: 'spray';
     font-size: 2rem;
+    font-weight: 100;
     @include responsive(tablet) {
         font-size: 3rem;
       }

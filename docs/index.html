@@ -98,11 +98,10 @@
     <article class="article article-about">
 
       <div class="article-about-container">
-        <div class="article__description article__front">
-          <div>
 
-          </div>
-          <h2 class=" title-spray">
+        <div class="article-about__description article-about__front">
+
+          <h2 class="title-about title-spray">
             <span class="title-spray__span">
               Front End
             </span>
@@ -112,8 +111,8 @@
             exercitationem, animi maiores, quaerat praesentium vero ad voluptate quas dolorum, aspernatur at eius. Animi
             architecto consectetur porro ducimus deleniti distinctio.</p>
         </div>
-        <div class="article__description article__design">
-          <h2 class=" title-spray">
+        <div class="article-about__description article-about__design">
+          <h2 class="title-about title-spray">
             <span class="title-spray__span">
               Graphic
             </span>
@@ -126,10 +125,13 @@
 
       </div>
 
-      <div class="read-more">
-        <img class="read-more-text" src="assets/images/read-more.svg" alt="">
-        <img class="read-more-image" src="assets/images/mancha-read.svg" alt="">
-      </div>
+      <picture class="article-about__image" >
+        <source media="(min-width: 1200px)" srcset="assets/images/read-more-desktop.svg" />
+        <source media="(min-width: 768px)" srcset="assets/images/read-more-tablet.svg" />
+        <source media="(min-width: 360px)" srcset="assets/images/read-more-mobile.svg" />
+        <img src="assets/images/read-more-desktop.svg" alt="" />
+      </picture>
+
     </article>
 
 
@@ -176,13 +178,24 @@
     </article>
 
     <article class=" article-contact">
-      <img class="article-contact__logo" src="assets/images/logo-footer.svg" alt="">
-      <div class="article-contact__icons">
-        <img src="assets/images/github.svg" alt="">
-        <img src="assets/images/correo.svg" alt="">
-        <img src="assets/images/instagram.png" alt="">
-        <img src="assets/images/behance.svg" alt="">
-        <img src="assets/images/linkedin.svg" alt="">
+
+      <div class="article-contact__containter">
+        
+        <picture class="article-contact__logo" >
+          <source media="(min-width: 1200px)" srcset="assets/images/logo-footer-desktop.png" />
+          <source media="(min-width: 768px)" srcset="assets/images/logo-footer-tablet.png" />
+          <source media="(min-width: 360px)" srcset="assets/images/logo-footer-mobile.png" />
+          <img src="assets/images/logo-footer-desktop.png" alt="" />
+        </picture>
+  
+        <div class="article-contact__icons">
+          <img src="assets/images/icon-github.svg" alt="">
+          <img src="assets/images/icon-mail.svg" alt="">
+          <img src="assets/images/icon-instagram.svg" alt="">
+          <img src="assets/images/icon-behance.svg" alt="">
+          <img src="assets/images/icon-linkedin.svg" alt="">
+        </div>
+
       </div>
     </article>
 
