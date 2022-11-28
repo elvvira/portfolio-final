@@ -20,9 +20,16 @@
     }
 
     &__container{
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 10%;
+    }
+    &__logo{
+        margin-right: auto;
+        margin-left: auto;
     }
     &__icons{
         display: flex;
@@ -37,6 +44,5 @@
         @include responsive (desktop){
            width: 40px;
         }
-
     }
 }
