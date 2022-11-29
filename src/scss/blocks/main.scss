@@ -1,2 +1,6 @@
 /* ESTILOS DEL MAIN */
 @use '../mixins/responsive.scss' as *;
+
+.main{
+    width: 100vw;
+}

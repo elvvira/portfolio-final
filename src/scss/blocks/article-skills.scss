@@ -2,7 +2,7 @@
 @use '../mixins/responsive.scss' as *;
 
 .article-skills{
-    
+    width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, var( --title-color),white);
     display: flex;

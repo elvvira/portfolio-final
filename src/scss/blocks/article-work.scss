@@ -1,33 +1,32 @@
 @use '../mixins/responsive.scss' as *;
 
-.article-work{
-    scroll-snap-align: center;
-}
+
 .works{
     height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    width: 100vw;
+    display: flex;
     overflow:scroll ; 
 
     &__section{
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         font-size: 2rem;
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
         padding-left: 10%;
         @include responsive (tablet){
             font-size: 3rem;
             padding-bottom: 3rem;
-            padding-left: 15%;
+            padding-left: 10%;
         }
 
     }
     &__title{
-        font-size: 4rem;
+        font-size: 3rem;
         text-align: right;
         margin-right: 0;
         margin-left: 0;
+        @include responsive (tablet){
+            font-size: 4rem;
+        }
     }
     &__content{
         writing-mode:horizontal-tb;
@@ -42,12 +41,13 @@
 
     }
     &__content--show{
-        min-width:200px;
-        padding-left: 3rem;
-        padding-bottom: 1rem;
+        min-width:280px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
         @include responsive (desktop){
-            min-width: 500px;
-            padding-left: 9rem;
+            min-width: 600px;
+            padding-left: 3rem;
         }
     }
 
@@ -76,4 +76,8 @@
         color: var(--primary-color);
     }
    
+}
+.work-image{
+    margin-bottom: 1rem;
+    border-radius: 1rem;
 }

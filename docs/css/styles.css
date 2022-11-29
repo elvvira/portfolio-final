@@ -467,6 +467,10 @@ body {
 }
 
 /* ESTILOS DEL MAIN */
+.main {
+  width: 100vw;
+}
+
 .article {
   height: 100vh;
   display: flex;
@@ -583,6 +587,7 @@ body {
 }
 
 .article-skills {
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(to bottom, var(--title-color), white);
   display: flex;
@@ -641,36 +646,35 @@ body {
   }
 }
 
-.article-work {
-  scroll-snap-align: center;
-}
-
 .works {
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  width: 100vw;
+  display: flex;
   overflow: scroll;
 }
 .works__section {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-size: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-left: 10%;
 }
 @media screen and (min-width: 640px) {
   .works__section {
     font-size: 3rem;
     padding-bottom: 3rem;
-    padding-left: 15%;
+    padding-left: 10%;
   }
 }
 .works__title {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: right;
   margin-right: 0;
   margin-left: 0;
+}
+@media screen and (min-width: 640px) {
+  .works__title {
+    font-size: 4rem;
+  }
 }
 .works__content {
   writing-mode: horizontal-tb;
@@ -684,14 +688,14 @@ body {
   transition: min-width 0.4s, padding 0.4s;
 }
 .works__content--show {
-  min-width: 200px;
-  padding-left: 3rem;
-  padding-bottom: 1rem;
+  min-width: 280px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media screen and (min-width: 1440px) {
   .works__content--show {
-    min-width: 500px;
-    padding-left: 9rem;
+    min-width: 600px;
+    padding-left: 3rem;
   }
 }
 .works__section-1 {
@@ -717,6 +721,11 @@ body {
 .works__section-6 {
   background-color: var(--white);
   color: var(--primary-color);
+}
+
+.work-image {
+  margin-bottom: 1rem;
+  border-radius: 1rem;
 }
 
 .article-contact {
