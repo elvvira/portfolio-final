@@ -2,6 +2,7 @@
 @use '../mixins/responsive.scss' as *;
 
 .article-skills{
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, var( --title-color),white);
@@ -11,7 +12,7 @@
     justify-content: center;
     gap: 7%;
     @include responsive(tablet) {
-        padding: 1rem;
+        flex-direction: row;
     }
     @include responsive(desktop) {
         flex-direction: row;
@@ -26,6 +27,7 @@
         align-items: center;
         text-align: center;
         justify-content: center;
+        animation: scale 20s  infinite alternate-reverse;
         @include responsive(tablet) {
             width: 350px;
             height: 350px;
@@ -36,10 +38,10 @@
         }
     }
     &__web{
-        background-color: var(--gray-light);
+        background-color: rgba(110, 178, 255, 0.346);
     }
     &__design{
-        background-color: var(--secondary-color);
+        background-color: rgba(255, 133, 247, 0.271);
     }
 
     &__title{
@@ -54,6 +56,16 @@
            font-size: 1.5rem;
         }
 
+    }
+
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
     }
 
 }

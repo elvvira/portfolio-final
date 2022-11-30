@@ -51,9 +51,12 @@
             position: absolute;
             top: 7%;
             left: 55%;
-        }
-        
+        } 
     } 
+    &__image:hover{
+        transform: scale(1.2);
+        
+    }
 
 
 }

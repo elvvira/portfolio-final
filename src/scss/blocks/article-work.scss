@@ -40,7 +40,7 @@
         font-size: 2rem;
         position: relative;
         text-align: left;
-        top: -40px;
+        top: -50px;
         left: 5%;
         @include responsive (tablet){
             width: 500px;
@@ -49,7 +49,7 @@
             position: relative;
             text-align: right;
             top: 200px;
-            left: -210px;
+            left: -225px;
         }
         @include responsive (desktop){
             width: 500px;
@@ -65,9 +65,15 @@
         position: absolute;
         transform: scale(0);
         font-size: 0.9rem;
-        top: -10%;
+        top: -25%;
         @include responsive (tablet){
+            top: -10%;
             font-size: 1rem;
+        } 
+        @include responsive (desktop){
+            top: -18%;
+            font-size: 1rem;
+            padding-right: 15rem;
         } 
        
     }
@@ -82,7 +88,7 @@
             border-radius: 1rem;
         }
         @include responsive (desktop){
-            width: 500px;
+            width: 400px;
             margin-bottom: 1rem;
             border-radius: 1rem;
         }
@@ -135,6 +141,7 @@
         left: 50%;
     } 
     @include responsive (desktop){
+        top: 26%;
         transform: rotate(0);
         left: 70%;
     } 
