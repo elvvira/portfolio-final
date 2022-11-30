@@ -25,14 +25,28 @@ arrowReverseElement.addEventListener('click', event => {
   submenuElement.classList.remove('submenu--show');
 });
 
-const accordionElement = document.getElementById('accordion');
-const accordionItems = document.querySelectorAll('.works__content');
 
-accordionElement.addEventListener("click", (event) => {
-    if (event.target.classList.contains("works__title")){
-        accordionItems.forEach((item)=> {
-            item.classList.remove("works__content--show");
-        });
-        event.target.nextElementSibling.classList.add("works__content--show");
+
+
+const accordionElement = document.getElementById('accordion');
+const allAccordionItems = document.querySelectorAll('.accordion__item');
+
+accordionElement.addEventListener('click', (ev) => {
+    allAccordionItems.forEach(accordionItem => accordionItem.classList.remove('accordion__item--active', ));
+
+    if (ev.target.parentElement.classList.contains('accordion__item')) {
+        ev.target.parentElement.classList.add('accordion__item--active');
     }
 });
+
+// const accordionElement = document.getElementById('accordion');
+// const accordionItems = document.querySelectorAll('.works__content');
+
+// accordionElement.addEventListener("click", (event) => {
+//     if (event.target.classList.contains("works__title")){
+//         accordionItems.forEach((item)=> {
+//             item.classList.remove("works__content--show");
+//         });
+//         event.target.nextElementSibling.classList.add("works__content--show");
+//     }
+// });

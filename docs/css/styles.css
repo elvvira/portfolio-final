@@ -653,106 +653,153 @@ body {
   }
 }
 
-.works {
+.accordion {
+  width: 100%;
   height: 100vh;
   display: flex;
-  overflow: scroll;
-}
-.works__section {
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  font-size: 2rem;
-  padding-bottom: 1rem;
-  padding-left: 10%;
+  flex-direction: column;
 }
 @media screen and (min-width: 640px) {
-  .works__section {
-    font-size: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 11%;
+  .accordion {
+    flex-direction: row;
   }
 }
-.works__title {
-  font-size: 3rem;
-  text-align: right;
-  margin-right: 0;
-  margin-left: 0;
-}
-@media screen and (min-width: 640px) {
-  .works__title {
-    font-size: 4rem;
-  }
-}
-.works__content {
-  writing-mode: horizontal-tb;
-  transform: rotate(180deg);
-  font-size: 1rem;
-  margin: 0;
-  min-width: 0;
-  width: 0;
-  padding: 0;
+.accordion__item {
+  position: relative;
+  padding-top: 2rem;
+  width: 100%;
+  height: 100vh;
+  flex-grow: 0;
+  flex-shrink: 1;
   overflow: hidden;
-  transition: min-width 0.4s, padding 0.4s;
-}
-.works__content--show {
-  min-width: 230px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  transition: flex-shrink 0.5s;
 }
 @media screen and (min-width: 640px) {
-  .works__content--show {
-    min-width: 400px;
-    padding-left: 2rem;
+  .accordion__item {
+    width: 70%;
+  }
+}
+.accordion__item--active {
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: 100%;
+  height: 65vh;
+  padding-right: 6rem;
+}
+@media screen and (min-width: 640px) {
+  .accordion__item--active {
+    height: 100vh;
+    width: 70%;
+  }
+}
+.accordion__title {
+  width: 300px;
+  font-size: 2rem;
+  position: relative;
+  text-align: left;
+  top: -40px;
+  left: 5%;
+}
+@media screen and (min-width: 640px) {
+  .accordion__title {
+    width: 500px;
+    rotate: -90deg;
+    font-size: 3rem;
+    position: relative;
+    text-align: right;
+    top: 200px;
+    left: -210px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .works__content--show {
-    min-width: 500px;
-    padding-left: 2rem;
+  .accordion__title {
+    width: 500px;
+    rotate: -90deg;
+    font-size: 3rem;
+    position: relative;
+    text-align: right;
+    top: 200px;
+    left: -215px;
   }
 }
-.works__section-1 {
+.accordion__content {
+  position: absolute;
+  transform: scale(0);
+  font-size: 0.9rem;
+  top: -10%;
+}
+@media screen and (min-width: 640px) {
+  .accordion__content {
+    font-size: 1rem;
+  }
+}
+.accordion__image {
+  width: 200px;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+@media screen and (min-width: 640px) {
+  .accordion__image {
+    width: 300px;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .accordion__image {
+    width: 500px;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+}
+.accordion__item-1 {
   background-color: var(--gray-light);
   color: var(--white);
 }
-.works__section-2 {
+.accordion__item-2 {
   background-color: var(--secondary-color);
   color: var(--black);
 }
-.works__section-3 {
+.accordion__item-3 {
   background-color: var(--primary-color);
   color: var(--gray-light);
 }
-.works__section-4 {
+.accordion__item-4 {
   background-color: var(--black);
   color: var(--title-color);
 }
-.works__section-5 {
+.accordion__item-6 {
   background-color: var(--title-color);
   color: var(--secondary-color);
 }
-.works__section-6 {
+.accordion__item-5 {
   background-color: var(--white);
   color: var(--primary-color);
 }
 
-.work-image {
-  width: 100%;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
+.accordion__item--active > * {
+  transform: scale(1);
+  position: relative;
+  left: 50px;
+  transition: transform 0.5s;
+}
+
+.accordion__item--active .accordion__title {
+  position: relative;
+  left: 60%;
+  top: 30%;
+  transform: rotate(90deg);
 }
 @media screen and (min-width: 640px) {
-  .work-image {
-    width: 85%;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
+  .accordion__item--active .accordion__title {
+    transform: rotate(0);
+    left: 50%;
   }
 }
 @media screen and (min-width: 1440px) {
-  .work-image {
-    width: 80%;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
+  .accordion__item--active .accordion__title {
+    transform: rotate(0);
+    left: 70%;
   }
 }
 
