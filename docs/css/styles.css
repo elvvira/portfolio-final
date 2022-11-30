@@ -467,17 +467,15 @@ body {
 }
 
 /* ESTILOS DEL MAIN */
-.main {
-  width: 100vw;
-}
-
 .article {
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .article-me {
+  position: relative;
   height: 100vh;
   background: linear-gradient(to top, var(--gradient-color), white);
   display: flex;
@@ -501,7 +499,7 @@ body {
 }
 @media screen and (min-width: 640px) {
   .article-me__description {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     width: 75%;
   }
 }
@@ -516,6 +514,14 @@ body {
 .article-me__image {
   margin-right: auto;
   margin-left: auto;
+}
+
+.mancha {
+  position: absolute;
+  top: -25%;
+  right: 0;
+  z-index: 100;
+  opacity: 0.5;
 }
 
 .title-about {
@@ -553,7 +559,7 @@ body {
 }
 @media screen and (min-width: 640px) {
   .article-about__description {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -579,11 +585,7 @@ body {
     position: absolute;
     top: 7%;
     left: 55%;
-    width: 70%;
   }
-}
-.article-about__image:hover {
-  width: 100%;
 }
 
 .article-skills {
@@ -595,6 +597,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 7%;
+}
+@media screen and (min-width: 640px) {
+  .article-skills {
+    padding: 1rem;
+  }
 }
 @media screen and (min-width: 1440px) {
   .article-skills {
@@ -662,7 +669,7 @@ body {
   .works__section {
     font-size: 3rem;
     padding-bottom: 3rem;
-    padding-left: 10%;
+    padding-left: 11%;
   }
 }
 .works__title {
@@ -688,14 +695,20 @@ body {
   transition: min-width 0.4s, padding 0.4s;
 }
 .works__content--show {
-  min-width: 280px;
+  min-width: 230px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: 640px) {
+  .works__content--show {
+    min-width: 400px;
+    padding-left: 2rem;
+  }
+}
 @media screen and (min-width: 1440px) {
   .works__content--show {
-    min-width: 600px;
-    padding-left: 3rem;
+    min-width: 500px;
+    padding-left: 2rem;
   }
 }
 .works__section-1 {
@@ -724,8 +737,23 @@ body {
 }
 
 .work-image {
+  width: 100%;
   margin-bottom: 1rem;
   border-radius: 1rem;
+}
+@media screen and (min-width: 640px) {
+  .work-image {
+    width: 85%;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .work-image {
+    width: 80%;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
 }
 
 .article-contact {

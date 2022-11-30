@@ -2,6 +2,7 @@
 
 
 .works{
+    
     height: 100vh;
     display: flex;
     overflow:scroll ; 
@@ -15,7 +16,7 @@
         @include responsive (tablet){
             font-size: 3rem;
             padding-bottom: 3rem;
-            padding-left: 10%;
+            padding-left: 11%;
         }
 
     }
@@ -41,13 +42,17 @@
 
     }
     &__content--show{
-        min-width:280px;
+        min-width:230px;
         padding-left: 1rem;
         padding-right: 1rem;
+        @include responsive (tablet){
+            min-width: 400px;
+            padding-left: 2rem;
+        }
         
         @include responsive (desktop){
-            min-width: 600px;
-            padding-left: 3rem;
+            min-width: 500px;
+            padding-left: 2rem;
         }
     }
 
@@ -78,6 +83,18 @@
    
 }
 .work-image{
+    
+    width: 100%;
     margin-bottom: 1rem;
     border-radius: 1rem;
+    @include responsive (tablet){
+        width: 85%;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+    }
+    @include responsive (desktop){
+        width: 80%;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+    }
 }

@@ -1,10 +1,12 @@
 @use '../mixins/responsive.scss' as *;
 .article{
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 .article-me{
+    position: relative;
     height: 100vh;
     background: linear-gradient(to top, var( --gradient-color), white);
     display: flex;
@@ -26,7 +28,7 @@
         margin-left: auto;
        
         @include responsive(tablet) {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             width: 75%;
         }
         @include responsive(desktop) {
@@ -39,4 +41,12 @@
     &__image{
         margin-right: auto;margin-left: auto;
     }
+}
+
+.mancha{
+    position: absolute;
+    top: -25%;
+    right: 0;
+    z-index: 100;opacity: 0.5;
+
 }
