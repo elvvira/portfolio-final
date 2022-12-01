@@ -651,10 +651,10 @@ body {
   }
 }
 .article-skills__web {
-  background-color: rgba(110, 178, 255, 0.346);
+  background-color: rgba(160, 206, 255, 0.346);
 }
 .article-skills__design {
-  background-color: rgba(255, 133, 247, 0.271);
+  background-color: rgba(255, 158, 249, 0.271);
 }
 .article-skills__title {
   font-size: 1rem;
@@ -743,11 +743,11 @@ body {
   .accordion__title {
     width: 500px;
     rotate: -90deg;
-    font-size: 3rem;
+    font-size: 4rem;
     position: relative;
     text-align: right;
     top: 200px;
-    left: -215px;
+    left: -200px;
   }
 }
 .accordion__content {
@@ -875,16 +875,19 @@ body {
   top: 80%;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: center;
+  height: 10%;
 }
 
 .icon {
-  width: 40px;
+  width: 30px;
+}
+.icon__container {
+  width: 60px;
 }
 
 .icon:hover {
-  width: 70px;
-  color: pink;
+  width: 50px;
 }
 
 .title-spray {

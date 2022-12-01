@@ -54,11 +54,11 @@
         @include responsive (desktop){
             width: 500px;
             rotate: -90deg;
-            font-size: 3rem;
+            font-size: 4rem;
             position: relative;
             text-align: right;
             top: 200px;
-            left: -215px;
+            left: -200px;
         }  
     }
     &__content{
