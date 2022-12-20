@@ -36,12 +36,12 @@
 
 
     &__title{
-        width: 300px;
+        width: 170px;
         font-size: 2rem;
         position: relative;
         text-align: left;
         top: -50px;
-        left: 5%;
+        left: 0%;
         @include responsive (tablet){
             width: 500px;
             rotate: -90deg;

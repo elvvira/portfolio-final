@@ -512,6 +512,8 @@ body {
   color: var(--primary-color);
 }
 .article-me__image {
+  width: 70%;
+  background-color: red;
   margin-right: auto;
   margin-left: auto;
   transform-origin: center;
@@ -519,7 +521,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .article-me__image {
-    height: 74%;
+    width: 30%;
   }
 }
 
@@ -675,10 +677,10 @@ body {
 
 @keyframes scale {
   0% {
-    transform: scale(1);
+    transform: scale(0.7);
   }
   100% {
-    transform: scale(2);
+    transform: scale(1);
   }
 }
 .accordion {
@@ -721,12 +723,12 @@ body {
   }
 }
 .accordion__title {
-  width: 300px;
+  width: 170px;
   font-size: 2rem;
   position: relative;
   text-align: left;
   top: -50px;
-  left: 5%;
+  left: 0%;
 }
 @media screen and (min-width: 640px) {
   .accordion__title {

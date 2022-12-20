@@ -39,12 +39,14 @@
         color: var(--primary-color);
     }
     &__image{
+        width: 70%;
+        background-color: red;
         margin-right: auto;
         margin-left: auto;
         transform-origin:center;
         animation: rotar 20s infinite linear;
         @include responsive(desktop) {
-            height: 74%;
+            width: 30%;
         }
        
     }
