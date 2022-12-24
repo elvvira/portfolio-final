@@ -65,13 +65,13 @@
         position: absolute;
         transform: scale(0);
         font-size: 0.9rem;
-        top: -25%;
+        top: -15%;
         @include responsive (tablet){
-            top: -10%;
+            top: 0%;
             font-size: 1rem;
         } 
         @include responsive (desktop){
-            top: -18%;
+            top: 0%;
             font-size: 1rem;
             padding-right: 15rem;
         } 
@@ -79,7 +79,7 @@
     }
 
     &__image{
-        width: 200px;
+        width: 180px;
         margin-bottom: 0.5rem;
         border-radius: 0.5rem;
         @include responsive (tablet){
@@ -133,15 +133,16 @@
 
 .accordion__item--active .accordion__title{
     position: relative;
-    left: 60%;
-    top: 30%;
+    left: 90%;
+    top: 10%;
     transform: rotate(90deg);
     @include responsive (tablet){
         transform: rotate(0);
         left: 50%;
+        top: 20%;
     } 
     @include responsive (desktop){
-        top: 26%;
+        top: 20%;
         transform: rotate(0);
         left: 70%;
     } 

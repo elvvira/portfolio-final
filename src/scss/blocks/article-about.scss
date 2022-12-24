@@ -45,16 +45,18 @@
         }
     }
     &__image{
+        position: relative;
         margin-right: auto;
         margin-left: auto;
+        top: -30px;
         @include responsive(desktop) {
-            position: absolute;
+         
             top: 7%;
             left: 55%;
         } 
     } 
     &__image:hover{
-        transform: scale(1.2);
+        transform: scale(1.1);
         
     }
 
