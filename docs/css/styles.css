@@ -593,7 +593,7 @@ body {
   }
 }
 .article-about__image {
-  position: relative;
+  position: absolute;
   margin-right: auto;
   margin-left: auto;
   top: -30px;
@@ -766,7 +766,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .accordion__content {
-    top: 0%;
+    top: -200px;
     font-size: 1rem;
     padding-right: 15rem;
   }
@@ -786,6 +786,13 @@ body {
 @media screen and (min-width: 1440px) {
   .accordion__image {
     width: 400px;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .accordion__image {
+    width: 70%;
     margin-bottom: 1rem;
     border-radius: 1rem;
   }

@@ -1,71 +1,69 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/responsive.scss' as *;
 
-.article-skills{
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, var( --title-color),white);
+.article-skills {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--title-color), white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7%;
+  @include responsive(tablet) {
+    flex-direction: row;
+  }
+  @include responsive(desktop) {
+    flex-direction: row;
+  }
+
+  &__container {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    gap: 7%;
+    animation: scale 20s infinite alternate-reverse;
     @include responsive(tablet) {
-        flex-direction: row;
+      width: 350px;
+      height: 350px;
     }
     @include responsive(desktop) {
-        flex-direction: row;
+      width: 350px;
+      height: 350px;
     }
-    
-    &__container{
-        width: 250px;
-        height: 250px;
-        border-radius: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        animation: scale 20s  infinite alternate-reverse;
-        @include responsive(tablet) {
-            width: 350px;
-            height: 350px;
-        }
-        @include responsive(desktop) {
-            width: 350px;
-            height: 350px;
-        }
-    }
-    &__web{
-        background-color: rgba(160, 206, 255, 0.346);
-    }
-    &__design{
-        background-color: rgba(255, 158, 249, 0.271);
-    }
+  }
+  &__web {
+    background-color: rgba(160, 206, 255, 0.346);
+  }
+  &__design {
+    background-color: rgba(255, 158, 249, 0.271);
+  }
 
-    &__title{
-        font-size: 1rem;
+  &__title {
+    font-size: 1rem;
+  }
+  &__text {
+    font-size: 1rem;
+    @include responsive(tablet) {
+      font-size: 1.2rem;
     }
-    &__text{
-        font-size: 1rem;
-        @include responsive(tablet) {
-            font-size: 1.2rem;
-        }
-        @include responsive(desktop) {
-           font-size: 1.5rem;
-        }
-
+    @include responsive(desktop) {
+      font-size: 1.5rem;
     }
-
+  }
 }
 
-@keyframes scale{
-    0%{
-        transform: scale(0.7);
-    }
-    100%{
-        transform: scale(0.9);
-    }
-
+@keyframes scale {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(0.9);
+  }
 }

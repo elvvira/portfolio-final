@@ -1,64 +1,60 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
-.title-about{
-    color: var(--title-color);
-    font-weight: 100;
+.title-about {
+  color: var(--title-color);
+  font-weight: 100;
 }
-.article-about{
-    // background: linear-gradient(to bottom, var( --gradient-color),var(--gray-light));
-    background-color: var(--gray-light);
-    background-image: url(../assets/images/flower-mobile.png);
-    background-repeat: no-repeat;
-    background-position: top right;
-    position: relative;
+.article-about {
+  // background: linear-gradient(to bottom, var( --gradient-color),var(--gray-light));
+  background-color: var(--gray-light);
+  background-image: url(../assets/images/flower-mobile.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: relative;
+  @include responsive(tablet) {
+    background-image: url(../assets/images/flower-tablet.png);
+    background-position: bottom left;
+  }
+  @include responsive(desktop) {
+    background-image: url(../assets/images/flower-desktop.png);
+    background-position: bottom left;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100vh;
+    justify-content: space-evenly;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__description {
     @include responsive(tablet) {
-        background-image: url(../assets/images/flower-tablet.png);
-        background-position: bottom left;
-      }
-      @include responsive(desktop) {
-        background-image: url(../assets/images/flower-desktop.png);
-        background-position: bottom left;
-      }
-
-    &-container{
-        display: flex;
-        flex-direction: column;
-        width: 75%;
-        height: 100vh;
-        justify-content:space-evenly;
-        margin-right: auto;
-        margin-left: auto;
+      font-size: 1.1rem;
     }
-    &__description{
-        @include responsive(tablet) {
-            font-size: 1.1rem;
-        }
-        @include responsive(desktop) {
-            font-size: 1.8rem;
-            width: 50%;
-        }
+    @include responsive(desktop) {
+      font-size: 1.8rem;
+      width: 50%;
     }
-    &__design{
-        text-align: right;
-        @include responsive(desktop) {
-            margin-left: 45%;
-        }
+  }
+  &__design {
+    text-align: right;
+    @include responsive(desktop) {
+      margin-left: 45%;
     }
-    &__image{
-        position: relative;
-        margin-right: auto;
-        margin-left: auto;
-        top: -30px;
-        @include responsive(desktop) {
-         
-            top: 7%;
-            left: 55%;
-        } 
-    } 
-    &__image:hover{
-        transform: scale(1.1);
-        
+  }
+  &__image {
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    top: -30px;
+    @include responsive(desktop) {
+      top: 7%;
+      left: 55%;
     }
-
-
+  }
+  &__image:hover {
+    transform: scale(1.1);
+  }
 }
